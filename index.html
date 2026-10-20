@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAGOS ELITE BARBERS | Premium Grooming</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <div class="logo">LAGOS <span>ELITE</span> BARBERS</div>
+        <div class="nav-links" id="navLinks"><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#booking">Book</a></div>
+        <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><i class="fa fa-bars"></i></div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-grid"><div>
+        <h1>NOT JUST A CUT.<br><em>AN ELITE STATEMENT.</em></h1>
+        <p>Lagos' most exclusive grooming house in VI & Lagos. 6 Master Barbers. Precision fades, luxury beard sculpting.</p>
+        <a href="#booking" class="btn-gold">Book Your Chair</a>
+        <div class="hero-stats"><div class="stat">
+            <b>4.9/5</b><span>2,400+ Reviews</span></div>
+            <div class="stat"><b>6</b><span>Master Barbers</span></div>
+            <div class="stat"><b>Open</b><span>9AM - 9PM</span></div>
+        </div></div>
+        <div class="hero-img"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800"></div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+       <div class="section-title">
+          <h2>SERVICES <span>& PRICES</span></h2>
+          <p>All prices in NGN - includes drink & consultation</p>
+       </div>
+       <div class="services-grid" id="servicesGrid"> </div>
+    </div>
+</section>
+
+<section id="barbers" style="background:#0f0f0f">
+    <div class="container">
+        <div class="section-title"><h2>MEET THE <span>ELITE 6</span></h2><p>6 artists. Different specialties. Pick your favorite.</p></div>
+        <div class="barbers" id="barbersGrid"></div>
+    </div>
+</section>
+
+<section id="booking">
+    <div class="container">
+        <div class="section-title">
+            <h2>BOOK YOUR <span>CHAIR</span></h2>
+        </div>
+          <div class="booking-wrap">
+             <div class="booking-form">
+                <div class="stepper">
+                    <div class="on">
+
+                    </div>
+                    <div>
+
+                 </div>
+            <div>
+
+        </div>
+    </div>
+    <div class="form-step active" id="step1"><label>Select Service</label>
+        <div class="chips" id="serviceChips"></div>
+        <label style="margin-top:18px">Select Barber</label>
+        <div class="chips" id="barberChips"></div>
+        <button class="btn-gold" style="width:100%;margin-top:20px" onclick="nextStep(2)">Continue</button>
+    </div>
+    <div class="form-step" id="step2">
+        <label>Date</label>
+        <input type="date" id="dateInput">
+        <label>Time</label>
+        <div class="time-grid" id="timeGrid"></div>
+        <button class="btn-gold" style="width:100%;margin-top:20px" onclick="nextStep(3)">Continue</button>
+        <button style="background:none;border:none;color:var(--muted);margin-top:10px;width:100%;cursor:pointer" onclick="nextStep(1)">← Back</button>
+    </div>
+   <div class="form-step" id="step3">
+       <label>Name</label>
+       <input id="custName" placeholder="Tunde A.">
+       <label>WhatsApp Phone</label>
+       <input id="custPhone" placeholder="080...">
+       <label>Notes</label>
+       <textarea id="custNotes" rows="3"></textarea>
+       <button class="btn-gold" style="width:100%;margin-top:20px" onclick="confirmBooking()"><i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp</button>
+       <button style="background:none;border:none;color:var(--muted);margin-top:10px;width:100%;cursor:pointer" onclick="nextStep(2)">← Back</button>
+   </div>
+    </div>
+       <div class="summary"><h3>SUMMARY</h3>
+          <div id="summaryBox">
+               <div class="sum-row"><span>Service</span><span id="sumService">—</span></div>
+               <div class="sum-row"><span>Barber</span><span id="sumBarber">—</span></div>
+               <div class="sum-row"><span>Date</span><span id="sumDate">—</span></div>
+               <div class="sum-row"><span>Time</span><span id="sumTime">—</span></div>
+               <div class="sum-row total"><span>Total</span><span id="sumTotal">₦0</span></div>
+          </div>
+           <!-- <p style="margin-top:20px;font-size:12px;color:var(--muted)">Change WhatsApp number in code: shopNumber="2348000000000"</p> -->
+       </div>
+    </div>
+   </div>
+</section>
+
+
+</body>
+<script src="script.js"></script>
+</html>
